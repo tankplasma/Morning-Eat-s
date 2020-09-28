@@ -2,44 +2,65 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="css/style.css" />
-</head>
+
+
+
 <body>
-<?php
-require('config.php');
-if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
-  // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
-  $username = stripslashes($_REQUEST['username']);
-  $username = mysqli_real_escape_string($conn, $username); 
-  // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
-  $email = stripslashes($_REQUEST['email']);
-  $email = mysqli_real_escape_string($conn, $email);
-  // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
-  $password = stripslashes($_REQUEST['password']);
-  $password = mysqli_real_escape_string($conn, $password);
-  //requéte SQL + mot de passe crypté
-    $query = "INSERT into `users` (username, email, password)
-              VALUES ('$username', '$email', '".hash('sha256', $password)."')";
-  // Exécuter la requête sur la base de données
-    $res = mysqli_query($conn, $query);
-    if($res){
-       echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
-       </div>";
-    }
-}else{
-?>
-<form class="box" action="" method="post">
-  <h1 class="box-logo box-title"><a href="http://localhost/php/site_cv_eval/about.php">Mon CV en site</a></h1>
-    <h1 class="box-title">S'inscrire</h1>
-  <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required />
-    <input type="text" class="box-input" name="email" placeholder="Email" required />
-    <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
-    <input type="submit" name="submit" value="S'inscrire" class="box-button" />
-    <p class="box-register">Déjà inscrit? <a href="login.php">Connectez-vous ici</a></p>
-</form>
-<?php } ?>
+  <section class="resume-section p-3 p-lg-5 d-flex align-items-center">
+    <div class="w-100">
+      <h2 class="mb-5">Morning Eat's</h2>
+      <div class="col-md-9 col-md-push-1 ">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+              <div class="input-group">
+                <div class="input-group-btn search-panel">
+                  <select class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <option>All</option>
+                    <option>Boulangerie</option>
+                    <option>Boucherie</option>
+                    <option>Fast-Food</option>
+                    <option>Japonais</option>
+                    <option>Chinois</option>
+                  </select>
+                </div>
+
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control" name="x" placeholder="Search term...">
+                <span class="input-group-btn">
+                  <input type="submit" value="Rechercher" name="submit" class="box-button">
+                </span>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img1.jpg" alt="Responsive image"></div>
+
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img2.jpg" alt="Responsive image"></div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img3.jpg" alt="Responsive image"></div>
+
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img4.png" alt="Responsive image"></div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img5.jpg" alt="Responsive image"></div>
+
+        <div class="p-2 bd-highlight"><img class="img-fluid" src="img/img6.jpeg" alt="Responsive image"></div>
+
+      </div>
+
+    </div>
+  </section>
+
 </body>
+
 </html>
