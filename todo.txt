@@ -49,3 +49,4 @@ bdd
 			-> type de commerce
 			-> adresse commerce
 			-> type produit
+bite
