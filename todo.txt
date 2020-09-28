@@ -49,3 +49,7 @@ bdd
 			-> type de commerce
 			-> adresse commerce
 			-> type produit
+<<<<<<< HEAD
+=======
+bite
+>>>>>>> e88bc9cf8c53503fe81ad53fb6c305491f5f58a4
