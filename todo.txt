@@ -1,0 +1,51 @@
+Les objectifs :
+
+Ossature du site
+	-> espace utilisateur
+		-> sécuriser les données
+		-> ajout mode de payement
+		-> ajout adresse
+		-> commande récurrente
+		-> commerces favoris
+
+	-> création de fiche utilisateur (livreur/commerçant)
+		-> système de notation
+		Commerce :
+			-> lister les produits
+			-> spécificité du commerce ( avec détail possible)
+			-> adresse du commerce
+		Livreur :
+			-> horaire disponible
+			-> méthode de transport
+	-> système de recherche
+		-> par notation
+		-> par proximité
+		-> par type de commerce
+		-> par produit
+	-> commande
+		-> création du panier
+		-> affectation du livreur
+			-> système de calcul d’itinéraire !?
+	-> livraison
+		-> géolocalisation du livreur ?
+		-> noté la prestation après livraison
+bdd
+	-> utilisateur :
+		-> type (A(cheteur)-L(ivreur)-V(endeur))
+		-> nom/prenom
+		->adress
+		->payemment
+		->historique
+		->favoris
+			->commerce
+			->commande
+		Si != A :
+			->notation
+		Si L :
+			-> Historique course
+			-> Methode de transport
+			-> disponible
+		Si V :
+			-> type de commerce
+			-> adresse commerce
+			-> type produit
