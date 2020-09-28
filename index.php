@@ -1,19 +1,21 @@
 <?php include("inc/header.inc.php"); ?>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h3>Bienvenue sur mon site, vous pouvez vous balader et regarder chaque recoin de ce site (des petits easter eggs s'y cachent 😉) </h3>
-<br>
-<br>
-<h5>Vous pouvez aussi vous créez un compte pour pouvoir accéder à la page Admin afin de modifier les informations des expériences </h5>
-<h5>ou bien vous connecter à mon compte : Guillaume / PHPynov18</h5>
-<br>
-<br>
-<h5>Et pour information mes données Expériences et Education proviennent d'une base de données SQL</h5>
+<div class="d-flex justify-content-center">
+    <h1>Morning Eats</h1>
+    <img src="logo-morning.png" alt="">
+</div>
+
+<h3>Offre</h3>
+
+<a href="restorant.php"><img src="img/banniereigraal4.webp" class="img-fluid" alt="Responsive image"></a>
+
+<h3>Favoris</h3>
+
+<a href="restorant.php"><img src="img/index.jpg" class="img-fluid" alt="Responsive image"></a>
+
+<h3>Recomandation</h3>
+
+<a href="restorant.php"><img src="img/pizza.jpg" class="img-fluid" alt="Responsive image"></a>
 
 </body>
 
